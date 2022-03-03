@@ -2,12 +2,7 @@
 
 @section('page-content')
 
-    <div class="row">
 
-        <div class="col-lg-12">
-            <p class="text-end"><a href="" class="btn btn-primary">New Book</a></p>
-        </div>
-    </div>
 
     <table class="table table-striped">
         <tr>
