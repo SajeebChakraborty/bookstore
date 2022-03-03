@@ -1,7 +1,7 @@
 @extends('layout', ['title'=> 'Home'])
 
 @section('page-content')
-    <table width="500" border="1" cellspacing="0" cellpadding="0" align>
+    <table class="table table-striped table-bordered">
         <th>title</th>
         <th>author</th>
         <th>price</th>

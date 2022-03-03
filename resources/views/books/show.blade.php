@@ -1,7 +1,15 @@
 @extends('layout',['title'=>'Show'])
 
 @section('page-content')
-<table border="1" width="50%" >
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <p class="text-end"><a href="" class="btn btn-primary">New Book</a></p>
+        </div>
+    </div>
+
+    <table class="table table-striped">
         <tr>
             <th>Title</th>
             <td>{{$book->title}}</td>
@@ -23,6 +31,6 @@
             <td>{{$book->price}}</td>
         </tr>
     </table>
-    <p><a href="{{route('books.index')}}">Back</a></p>
 
+    <p class="text-start"><a href="{{route('books.index')}}" class="btn btn-danger">Back</a></p>
 @endsection

@@ -9,19 +9,19 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::select('id','title', 'author','price')
-                    ->orderBy('author')
-                    ->get();
+        $books = Book::select('id', 'title', 'author', 'price')
+            ->orderBy('author')
+            ->get();
 
 
-        return view('books.index',['books'=>$books]);
+        return view('books.index', ['books' => $books]);
     }
 
     public function show(Request $request)
     {
         $book = Book::find($request->id);
 
-        return view('books.show',['book'=>$book]);
+        return view('books.show', ['book' => $book]);
     }
 
 
