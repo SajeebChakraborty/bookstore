@@ -7,12 +7,15 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $books = Book::select('id', 'title', 'author', 'price')
-            ->orderBy('id')
-            ->get();
-
+        if ($request->has('search')) {
+            $books = Book::where('title', 'like', '%' . $request->get('search') . '%')
+                ->orWhere('author', 'like', '%' . $request->get('search') . '%')
+                ->paginate(10);
+        } else {
+            $books = Book::paginate(10);
+        }
 
         return view('books.index', ['books' => $books]);
     }
