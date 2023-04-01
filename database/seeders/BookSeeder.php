@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Book;
-use Faker\Factory as FakerFactory;
+
 use Illuminate\Database\Seeder;
 
 class BookSeeder extends Seeder
@@ -18,9 +18,9 @@ class BookSeeder extends Seeder
 
         Book::truncate();
 
-        $faker = FakerFactory::create();
+        $faker = \Faker\Factory::create();
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 200; $i++) {
             Book::create([
                 'title'  => $faker->sentence,
                 'author' => $faker->name,
