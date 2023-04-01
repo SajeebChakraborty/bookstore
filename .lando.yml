@@ -1,0 +1,6 @@
+name: bookstore
+recipe: laravel
+config:
+  webroot: public
+  via: nginx
+  php: 7.4
