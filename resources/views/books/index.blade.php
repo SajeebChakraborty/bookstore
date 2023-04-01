@@ -3,7 +3,7 @@
 @section('page-content')
     <div class="row">
         <div class="col-lg-10">
-            <form action="{{ route('books.index') }}" method="GET" >
+            <form  action="{{ route('books.index') }}" method="GET" >
                 <div class="form-row">
                     <div class="col-8">
                         <input type="text" class="form-control" id="search" name="search" placeholder="Search"
@@ -43,10 +43,10 @@
                 </td>
 
                 <td>
-                    <form method="post" action="{{route('books.destroy',$book)}}" onsubmit="return confirm('Sure?')">
+                    <form  method="post" action="{{route('books.destroy',$book)}}" onsubmit="return confirm('Sure?')">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="Delete" class="btn btn-link text-danger"/>
+                        <input type="submit" style="padding: 0; margin: 0" value="Delete" class="btn btn-link text-danger"/>
                     </form>
                 </td>
             </tr>
